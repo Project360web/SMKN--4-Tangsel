@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(#393E46, #505863);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#9ac554, #C4FB6D);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(#9ac554dd, #c4fb6ddb);
+}
+
+::-webkit-scrollbar-horizontal{
+    display: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('SMKN 4 Tangsel.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+li, a, button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 50;
+}
+
+.sticky-nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Ubah warna latar belakang saat navbar berubah */
+    color: #fff; /* Ubah warna teks saat navbar berubah */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Efek transisi */
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.nav-links ul li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links ul li a:hover {
+    color: #C4FB6D;
+}
+
+.nav-links ul li .fas {
+    margin-left: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links ul li:hover .fas {
+    transform: rotate(-90deg);
+}
+
+/* Gaya untuk submenu */
+.dropdown-content {
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #393E46;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Gaya untuk item submenu */
+.dropdown-content a {
+    text-align: left;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+
+/* Gaya untuk item submenu saat dihover */
+.dropdown-content a:hover {
+    background: #393E46;
+    color: #C4FB6D;
+}
+
+/* Menampilkan submenu saat item utama dihover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-bar button {
+    margin-left: 20px;
+    padding: 10px 25px;
+    background-color: #C4FB6D;
+    color: #393E46;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-bar button:hover {
+    background-color: #c4fb6da0;
+    color: #fff;
+}
+
+/* Sekolah */
+.school {
+    width: 80%;
+    margin: 140px auto 100px;
+    text-align: center;
+}
+
+.school h1 {
+    margin: auto;
+    width: 60%;
+    font-size: 34px;
+    text-align: center;
+    color: #C4FB6D;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+.school-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.school-col {
+    flex-basis: 48%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.school-col img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.layer:hover {
+    background: rgba(196, 251, 109, 0.75);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #393E46;
+    font-size: 24px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* Galeri */
+.gallery {
+    width: 100%;
+    margin: 140px auto;
+}
+
+.img-gallery {
+    width: 80%;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.img-gallery img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.img-gallery img:hover{
+    transform: scale(0.9) translateY(-10%);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img {
+    width: 90%;
+    max-width: 1080px;
+}
+
+.full-img i {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, #393E46, #505863);
+    color: #fff;
+    padding: 40px 0 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.foot-box {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.foot-box:nth-child(2), .foot-box:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.footer-logo {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.foot-box:nth-child(1) p {
+    text-align: justify;
+}
+
+.foot-box h3 {
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.foot-box ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.foot-box ul li a {
+    color: #ccc;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+
+.foot-box ul li a:hover {
+    color: #C4FB6D;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+form .fas {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #C4FB6D;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fas {
+    font-size: 16px;
+    color: #fff;
+}
+
+.socmed .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #393E46;
+    background: #C4FB6D;
+    margin-right: 15px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.socmed .fab:hover {
+    background: #9ac554;
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    color: #ccc;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #393E46, #505863);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(to right, #9ac554, #C4FB6D);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

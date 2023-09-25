@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: linear-gradient(#393E46, #505863);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#9ac554, #C4FB6D);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(#9ac554dd, #c4fb6ddb);
+}
+
+::-webkit-scrollbar-horizontal{
+    display: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)), url('SMKN 4 Tangsel.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+li, a, button {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+}
+
+.sticky-nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Ubah warna latar belakang saat navbar berubah */
+    color: #fff; /* Ubah warna teks saat navbar berubah */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Efek transisi */
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0px 20px;
+}
+
+.nav-links ul li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links ul li a:hover {
+    color: #C4FB6D;
+}
+
+.nav-links ul li .fas {
+    margin-left: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links ul li:hover .fas {
+    transform: rotate(-90deg);
+}
+
+/* Gaya untuk submenu */
+.dropdown-content {
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #393E46;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Gaya untuk item submenu */
+.dropdown-content a {
+    text-align: left;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+    transition: .5s;
+}
+
+/* Gaya untuk item submenu saat dihover */
+.dropdown-content a:hover {
+    background: #393E46;
+    color: #C4FB6D;
+}
+
+/* Menampilkan submenu saat item utama dihover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-bar button {
+    margin-left: 20px;
+    padding: 10px 25px;
+    background-color: #C4FB6D;
+    color: #393E46;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-bar button:hover {
+    background-color: #c4fb6da0;
+    color: #fff;
+}
+
+/* Hubungi Kami */
+.contact-us {
+    position: relative;
+    width: 100%;
+    margin: 140px auto;
+    padding: 40px 100px;
+}
+
+.contact-us .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    border-bottom: 1px solid #ccc;
+    width: 60%;
+    margin: auto;
+}
+
+.contact-us .title h1 {
+    color: #C4FB6D;
+    font-size: 36px;
+}
+
+.form {
+    grid-area: form;
+    border-radius: 20px;
+}
+
+.info {
+    grid-area: info;
+    border-radius: 20px;
+}
+
+.map {
+    grid-area: map;
+    border-radius: 20px;
+}
+
+.contact {
+    padding: 40px;
+    background: #393E46;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+
+.contact h3 {
+    color: #C4FB6D;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: "form info" "form map";
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+    /* Form */
+.form-box {
+    position: relative;
+    width: 100%;
+}
+
+.form-box .row-50 {
+    display: flex;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.form-box .row-100 .input-box {
+    width: 100%;
+}
+
+.input-box span {
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.input-box input {
+    padding: 10px;
+    font-size: 16px;
+    background: transparent;
+    color: #C4FB6D;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+.input-box textarea {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #505863;
+    color: #fff;
+    border: 0;
+    border-radius: 10px;
+    resize: none;
+    min-height: 200px;
+    margin-bottom: 10px;
+}
+
+.input-box input[type="submit"] {
+    background: #9ac554;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    max-width: 120px;
+    font-weight: 500;
+    padding: 14px 15px;
+    cursor: pointer;
+}
+
+    /* Info */
+.info h3 {
+    color: #C4FB6D;
+}
+
+.info .info-box div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.info .info-box div span {
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #505863;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info .info-box div p {
+    color: #fff;
+    font-weight: 400;
+}
+
+.info .info-box div a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.sci {
+    margin-top: 40px;
+    display: flex;
+}
+
+.sci li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.sci li a {
+    color: #C4FB6D;
+    font-size: 26px;
+    transition: all 0.3s ease 0s;
+}
+
+.sci li a:hover {
+    color: #9ac554;
+}
+
+    /* Map */
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, #393E46, #505863);
+    color: #fff;
+    padding: 40px 0 30px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.foot-box {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.foot-box:nth-child(2), .foot-box:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.footer-logo {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.foot-box:nth-child(1) p {
+    text-align: justify;
+}
+
+.foot-box h3 {
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.foot-box ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.foot-box ul li a {
+    color: #ccc;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+
+.foot-box ul li a:hover {
+    color: #C4FB6D;
+}
+
+.foot-box form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+
+.foot-box form .fas {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.foot-box form input {
+    width: 100%;
+    background: transparent;
+    color: #C4FB6D;
+    border: 0;
+    outline: none;
+}
+
+.foot-box form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.foot-box form button .fas {
+    font-size: 16px;
+    color: #fff;
+}
+
+.socmed .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #393E46;
+    background: #C4FB6D;
+    margin-right: 15px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.socmed .fab:hover {
+    background: #9ac554;
+}
+
+hr {
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+    color: #ccc;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #393E46, #505863);
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(to right, #9ac554, #C4FB6D);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

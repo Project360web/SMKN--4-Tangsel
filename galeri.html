@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/LOGO SEKOLAH HD.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 4 Tangsel</title>
+    <link rel="stylesheet" href="css/galeristyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+</head>
+<body>
+    <section class="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="Index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="Index.html">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="#">Profil<i class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="Index.html#vision">Visi & Misi</a></li>
+                                <li><a href="Index.html#major">Program Keahlian</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="#">Galeri</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="contact" href="hubungi.html"><button>Hubungi Kami</button></a>
+        </div>
+    </section>
+
+    <!-- Sekolah -->
+    <section class="school">
+        <h1>Galeri Kami</h1>
+
+        <div class="school-row">
+            <div class="school-col">
+                <img src="images/Gerbang.jpg">
+                <div class="layer">
+                    <h3>Gerbang</h3>
+                </div>
+            </div>
+            <div class="school-col">
+                <img src="images/Bagian Dalam.jpg">
+                <div class="layer">
+                    <h3>Bagian Dalam</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="full-img" id="fullImgBox">
+            <img src="images/IMG_0565.jpg" id="fullImg">
+            <i class="fas fa-xmark" onclick="closeFullImg()"></i>
+        </div>
+
+        <div class="img-gallery">
+            <img src="images/IMG_0565.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0566.JPG" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0567.JPG" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0572.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0573.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0585.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_0676.JPG" onclick="openFullImg(this.src)">
+            <img src="images/IMG_1258.jpg" onclick="openFullImg(this.src)">
+            <img src="images/IMG_1364.jpg" onclick="openFullImg(this.src)">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <footer>
+            <div class="footer-content">
+                <div class="foot-box">
+                    <h3 class="footer-logo">SMKN 4 TANGSEL</h3>
+                    <p>SMK Negeri 4 Tangerang Selatan merupakan salah satu Sekolah Menengah Kejuruan ke-4 yang berada di lingkungan Pemerintahan Kota Tangerang Selatan, dengan bidang keahlian Desain Pemodelan & Informasi Bangunan, Layanan Kesehatan, Animasi dan Desain Komunikasi Visual.</p>
+                </div>
+                <div class="foot-box">
+                    <h3>Sekolah <div class="underline"><span></span></div> </h3>
+                    <p>Jl. Sumatera</p>
+                    <p>Jombang, Ciputat</p>
+                    <p>Tangsel, 15414, Indonesia</p>
+                    <br>
+                    <p>06.45 - 15.30 WIB</p>
+                </div>
+                <div class="foot-box">
+                    <h3>Menu <div class="underline"><span></span></div> </h3>
+                    <ul>
+                        <li><a href="Index.html">Beranda</a></li>
+                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="hubungi.html">Hubungi</a></li>
+                    </ul>
+                </div>
+                <div class="foot-box">
+                    <h3>Bantuan <div class="underline"><span></span></div> </h3>
+                    <form>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Ketik email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="socmed">
+                        <a href="https://www.youtube.com/@smkn4tangsel130"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/osis_smkn4tangsel/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6283805959747?text=Halo,%20saya%20ingin%20bertanya%20tentang%20PPDB%20di%20SMKN%204%20Tangsel."><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Project 360 © 2023 - All Rights Reserved</p>
+        </footer>
+    </section>
+
+
+<!-- Sticky -->
+<script>
+    const navBar = document.querySelector('.nav-bar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navBar.classList.add('sticky-nav'); // Tambah class saat digulir
+        } else {
+            navBar.classList.remove('sticky-nav'); // Hapus class saat kembali ke atas
+        }
+    });
+</script>
+
+<!-- Full Img -->
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+    }
+
+    function closeFullImg(){
+        fullImgBox.style.display = "none";
+    }
+</script>
+
+</body>
+</html>

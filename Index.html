@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/LOGO SEKOLAH HD.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 4 Tangsel</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css" />
+</head>
+<body>
+    <section class="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="Index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
+            </div>
+            <nav>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li class="dropdown">
+                            <a href="#">Profil<i class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="#vision">Visi & Misi</a></li>
+                                <li><a href="#major">Program Keahlian</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#facilities">Fasilitas</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="contact" href="hubungi.html"><button>Hubungi Kami</button></a>
+        </div>
+
+        <div class="header-content">
+            <div class="about">
+                <h1>SMKN 4 TANGERANG SELATAN</h1>
+                <p>SMK Negeri 4 Tangerang Selatan merupakan salah satu Sekolah Menengah Kejuruan ke-4 yang berada di lingkungan Pemerintahan Kota Tangerang Selatan, dengan bidang keahlian Desain Pemodelan & Informasi Bangunan, Layanan Kesehatan, Animasi dan Desain Komunikasi Visual.</p>
+                <a href="https://wa.me/6283805959747?text=Halo,%20saya%20ingin%20bertanya%20tentang%20PPDB%20di%20SMKN%204%20Tangsel.">
+                    <button><i class="fab fa-whatsapp"></i>Chat Kami</button>
+                </a>
+            </div>
+
+            <div class="wrap">
+                <div class="slider">
+                    <img id="slide1" src="images/IMG_0567.jpg">
+                    <img id="slide2" src="images/IMG_0676.jpg">
+                    <img id="slide3" src="images/Jalan kaki.jpg">
+                </div>
+                <div class="slidenavi">
+                    <a href="#" data-slide="0" class="active"></a>
+                    <a href="#" data-slide="1"></a>
+                    <a href="#" data-slide="2"></a>
+                </div>
+                <div class="button-container">
+                    <i class="fas fa-chevron-left" onclick="prevSlide()"></i>
+                    <i class="fas fa-chevron-right" onclick="nextSlide()"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Content -->
+    <section class="hero-content">
+        <!-- Visi Misi -->
+        <div class="vision" id="vision">
+            <h1>Visi & Misi</h1>
+            <div class="vision-content">
+                <div class="visi">
+                    <h2>Visi</h2>
+                    <p>Terbentuknya lulusan yang berakhlak mulia, sehat, unggul, kreatif, peduli lingkungan dan berwawasan global.</p>
+                </div>
+
+                <div class="misi">
+                    <h2>Misi</h2>
+                    <ul>
+                        <li>Memberikan pelayanan pendidikan dan kegiatan keagamaan untuk meningkatkan ketakwaan dan akhlak mulia.</li>
+                        <li>Mendidik siswa dalam ranah keterampilan, pengetahuan dan pembinaan karakter serta pelestarian lingkungan sesuai dengan program keahliannya.</li>
+                        <li>Menyiapkan siswa yang dapat berkolaborasi di dunia kerja dan berkebhinekaan global.</li>
+                        <li>Mewujudkan siswa yang memiliki jiwa wirausaha, dapat melanjutkan pendidikan ke jenjang yang lebih tinggi dan memiliki daya saing pada tingkat global.</li>
+                        <li>Meningkatkan peran sekolah kejuruan sebagai pusat pengembangan keahlian, budaya hidup sehat dan berwawasan lingkungan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Keahlian -->
+        <div class="major" id="major">
+            <h1>Program Keahlian</h1>
+            <div class="major-content">
+                <div class="major-box">
+                    <img src="images/LOGO ARSITEKTUR HD.png" width="60px">
+                    <h2>DPIB</h2>
+                </div>
+                <div class="major-box">
+                    <img src="images/KEPERAWATAN HD.png" width="60px">
+                    <h2>Lankes</h2>
+                </div>
+                <div class="major-box">
+                    <img src="images/Multimedia.png" width="45px">
+                    <h2>DKV</h2>
+                </div>
+                <div class="major-box">
+                    <img src="images/LOGO ANIMASI HD.png" width="60px">
+                    <h2>Animasi</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fasilitas -->
+        <div class="facilities" id="facilities">
+            <h1>Fasilitas</h1>
+            <div class="facilities-content">
+                <div class="fac-box">
+                    <span class="fas fa-building"></span>
+                    <h3>Ruang</h3>
+                </div>
+                <div class="fac-box">
+                    <span class="fas fa-bowl-food"></span>
+                    <h3>Kantin</h3>
+                </div>
+                <div class="fac-box">
+                    <span class="fas fa-tree"></span>
+                    <h3>Taman</h3>
+                </div>
+                <div class="fac-box">
+                    <span class="fas fa-mosque"></span>
+                    <h3>Mushola</h3>
+                </div>
+                <div class="fac-box">
+                    <span class="fas fa-computer"></span>
+                    <h3>Lab Komputer</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita -->
+    <section class="news">
+        <div class="news-head">
+            <span>Berita Terbaru</span>
+            <h3>SMKN 4 Tangsel</h3>
+        </div>
+
+        <div class="news-container">
+            <div class="news-box">
+                <div class="news-img">
+                    <img src="images/Sarapan (3).jpg">
+                </div>
+                <div class="news-text">
+                    <span>12 September 2023 | Sarapan Sehat</span>
+                    <a href="berita.html" class="news-title">Warga SMKN 4 Mengadakan Sarapan Sehat Bersama</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati laboriosam laborum sint culpa? Nobis corporis voluptate nemo rem blanditiis fugit, exercitationem dolores itaque ullam laboriosam natus pariatur sequi, praesentium aliquam.</p>
+                    <a href="berita.html">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="news-box">
+                <div class="news-img">
+                    <img src="images/Senam.jpeg">
+                </div>
+                <div class="news-text">
+                    <span>14 September 2023 | Senam</span>
+                    <a href="berita.html" class="news-title">Senam Pagi Untuk Menjaga Kesehatan Tubuh</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati laboriosam laborum sint culpa? Nobis corporis voluptate nemo rem blanditiis fugit, exercitationem dolores itaque ullam laboriosam natus pariatur sequi, praesentium aliquam.</p>
+                    <a href="berita.html">Baca Selengkapnya</a>
+                </div>
+            </div>
+            <div class="news-box">
+                <div class="news-img">
+                    <img src="images/IMG_0676.JPG">
+                </div>
+                <div class="news-text">
+                    <span>17 Agustus 2023 | Upacara Kemerdekaan</span>
+                    <a href="berita.html" class="news-title">Selamat Hari Kemerdekaan Republik Indonesia Ke-78</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati laboriosam laborum sint culpa? Nobis corporis voluptate nemo rem blanditiis fugit, exercitationem dolores itaque ullam laboriosam natus pariatur sequi, praesentium aliquam.</p>
+                    <a href="berita.html">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="news-button">
+            <a href="berita.html"><button>Berita Lainnya</button></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <footer>
+            <div class="footer-content">
+                <div class="foot-box">
+                    <h3 class="footer-logo">SMKN 4 TANGSEL</h3>
+                    <p>SMK Negeri 4 Tangerang Selatan merupakan salah satu Sekolah Menengah Kejuruan ke-4 yang berada di lingkungan Pemerintahan Kota Tangerang Selatan, dengan bidang keahlian Desain Pemodelan & Informasi Bangunan, Layanan Kesehatan, Animasi dan Desain Komunikasi Visual.</p>
+                </div>
+                <div class="foot-box">
+                    <h3>Sekolah <div class="underline"><span></span></div> </h3>
+                    <p>Jl. Sumatera</p>
+                    <p>Jombang, Ciputat</p>
+                    <p>Tangsel, 15414, Indonesia</p>
+                    <br>
+                    <p>06.45 - 15.30 WIB</p>
+                </div>
+                <div class="foot-box">
+                    <h3>Menu <div class="underline"><span></span></div> </h3>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#facilities">Fasilitas</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="hubungi.html">Hubungi</a></li>
+                    </ul>
+                </div>
+                <div class="foot-box">
+                    <h3>Bantuan <div class="underline"><span></span></div> </h3>
+                    <form>
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Ketik email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="socmed">
+                        <a href="https://www.youtube.com/@smkn4tangsel130"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/osis_smkn4tangsel/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6283805959747?text=Halo,%20saya%20ingin%20bertanya%20tentang%20PPDB%20di%20SMKN%204%20Tangsel."><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Project 360 © 2023 - All Rights Reserved</p>
+        </footer>
+    </section>
+
+<!-- Slideshow -->
+<script>
+    const slider = document.querySelector('.slider');
+    const slides = slider.querySelectorAll('img');
+    const slidenavi = document.querySelector('.slidenavi');
+    const slidenaviLinks = slidenavi.querySelectorAll('a');
+
+    let currentSlide = 0;
+    let slideInterval;
+
+    // Fungsi untuk mengganti slide berdasarkan indeks
+    function goToSlide(slideIndex) {
+        slider.style.scrollBehavior = 'smooth';
+        slider.scrollLeft = slideIndex * slides[0].clientWidth;
+
+        // Menghapus kelas "active" dari semua tautan navigasi
+        slidenaviLinks.forEach(link => link.classList.remove('active'));
+        // Menambahkan kelas "active" ke tautan navigasi yang sesuai
+        slidenaviLinks[slideIndex].classList.add('active');
+    }
+
+    // Fungsi untuk mengatur interval slideshow otomatis
+    function startSlideInterval() {
+        slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            goToSlide(currentSlide);
+        }, 5000); // Ubah angka ini untuk mengatur durasi otomatis
+    }
+
+    // Tambahkan event listener untuk tautan navigasi
+    slidenaviLinks.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            currentSlide = index;
+            goToSlide(currentSlide);
+        });
+    });
+
+    // Mulai slideshow otomatis saat halaman dimuat
+    startSlideInterval();
+
+    // Fungsi untuk berpindah ke slide berikutnya
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    }
+
+    // Fungsi untuk berpindah ke slide sebelumnya
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(currentSlide);
+    }
+
+    slider.addEventListener('wheel', (event) => {
+        if (event.deltaY > 0) {
+            nextSlide();
+        } else {
+            prevSlide();
+        }
+    });
+
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        startSlideInterval();
+    });
+</script>
+
+<!-- Sticky -->
+<script>
+    const navBar = document.querySelector('.nav-bar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navBar.classList.add('sticky-nav'); // Tambah class saat digulir
+        } else {
+            navBar.classList.remove('sticky-nav'); // Hapus class saat kembali ke atas
+        }
+    });
+</script>
+
+</body>
+</html>
