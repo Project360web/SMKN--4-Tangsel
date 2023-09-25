@@ -13,20 +13,20 @@
     <section class="header">
         <div class="nav-bar">
             <div class="logo">
-                <a href="Index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
+                <a href="index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
             </div>
             <nav>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="Index.html">Beranda</a></li>
+                        <li><a href="index.html">Beranda</a></li>
                         <li class="dropdown">
                             <a href="#">Profil<i class="fas fa-caret-down"></i></a>
                             <ul class="dropdown-content">
-                                <li><a href="Index.html#vision">Visi & Misi</a></li>
-                                <li><a href="Index.html#major">Program Keahlian</a></li>
+                                <li><a href="index.html#vision">Visi & Misi</a></li>
+                                <li><a href="index.html#major">Program Keahlian</a></li>
                             </ul>
                         </li>
-                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="index.html#facilities">Fasilitas</a></li>
                         <li><a href="berita.html">Berita</a></li>
                         <li><a href="#">Galeri</a></li>
                     </ul>
@@ -38,16 +38,16 @@
 
     <!-- Sekolah -->
     <section class="school">
-        <h1>Galeri Kami</h1>
+        <h1 data-aos="fade-down" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">Galeri Kami</h1>
 
         <div class="school-row">
-            <div class="school-col">
+            <div class="school-col" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
                 <img src="images/Gerbang.jpg">
                 <div class="layer">
                     <h3>Gerbang</h3>
                 </div>
             </div>
-            <div class="school-col">
+            <div class="school-col" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
                 <img src="images/Bagian Dalam.jpg">
                 <div class="layer">
                     <h3>Bagian Dalam</h3>
@@ -62,7 +62,7 @@
             <i class="fas fa-xmark" onclick="closeFullImg()"></i>
         </div>
 
-        <div class="img-gallery">
+        <div class="img-gallery" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
             <img src="images/IMG_0565.jpg" onclick="openFullImg(this.src)">
             <img src="images/IMG_0566.JPG" onclick="openFullImg(this.src)">
             <img src="images/IMG_0567.JPG" onclick="openFullImg(this.src)">
@@ -94,8 +94,8 @@
                 <div class="foot-box">
                     <h3>Menu <div class="underline"><span></span></div> </h3>
                     <ul>
-                        <li><a href="Index.html">Beranda</a></li>
-                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#facilities">Fasilitas</a></li>
                         <li><a href="berita.html">Berita</a></li>
                         <li><a href="hubungi.html">Hubungi</a></li>
                     </ul>
@@ -146,6 +146,12 @@
     function closeFullImg(){
         fullImgBox.style.display = "none";
     }
+</script>
+
+<!-- AOS -->
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </body>

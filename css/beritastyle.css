@@ -148,6 +148,7 @@ li, a, button {
     line-height: 1.4;
     border-radius: 20px;
     background: #393E46;
+    overflow: hidden;
     margin: 160px auto;
     padding: 20px;
     color: #fff;

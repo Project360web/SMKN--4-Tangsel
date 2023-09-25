@@ -13,20 +13,20 @@
     <section class="header">
         <div class="nav-bar">
             <div class="logo">
-                <a href="Index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
+                <a href="index.html"><img class="logo-img" src="images/LOGO SEKOLAH HD.png" width="50px"></a>
             </div>
             <nav>
                 <div class="nav-links">
                     <ul>
-                        <li><a href="#">Beranda</a></li>
+                        <li><a href="index.html">Beranda</a></li>
                         <li class="dropdown">
                             <a href="#">Profil<i class="fas fa-caret-down"></i></a>
                             <ul class="dropdown-content">
-                                <li><a href="Index.html#vision">Visi & Misi</a></li>
-                                <li><a href="Index.html#major">Program Keahlian</a></li>
+                                <li><a href="index.html#vision">Visi & Misi</a></li>
+                                <li><a href="index.html#major">Program Keahlian</a></li>
                             </ul>
                         </li>
-                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="index.html#facilities">Fasilitas</a></li>
                         <li><a href="berita.html">Berita</a></li>
                         <li><a href="galeri.html">Galeri</a></li>
                     </ul>
@@ -37,11 +37,11 @@
     </section>
 
     <section class="contact-us">
-        <div class="title">
+        <div class="title" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
             <h1>Hubungi Kami</h1>
         </div>
         <div class="contact-box">
-            <div class="contact form">
+            <div class="contact form" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
                 <h3>Kirim Pesan</h3>
                 <form>
                     <div class="form-box">
@@ -83,7 +83,7 @@
                 </form>
             </div>
 
-            <div class="contact info">
+            <div class="contact info" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="100" data-aos-duration="1000">
                 <h3>Informasi</h3>
                 <div class="info-box">
                     <div>
@@ -105,7 +105,7 @@
                 </ul>
             </div>
             
-            <div class="contact map">
+            <div class="contact map" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="200" data-aos-duration="1000">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14417.358114721652!2d106.68788!3d-6.2891794!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fac6bf94f6db%3A0xa29d876a1b8c0acd!2sSMK%20Negeri%204%20Kota%20Tangerang%20Selatan!5e1!3m2!1sid!2sid!4v1695641471738!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -130,8 +130,8 @@
                 <div class="foot-box">
                     <h3>Menu <div class="underline"><span></span></div> </h3>
                     <ul>
-                        <li><a href="Index.html">Beranda</a></li>
-                        <li><a href="Index.html#facilities">Fasilitas</a></li>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#facilities">Fasilitas</a></li>
                         <li><a href="berita.html">Berita</a></li>
                         <li><a href="#">Hubungi</a></li>
                     </ul>
@@ -167,6 +167,12 @@
             navBar.classList.remove('sticky-nav'); // Hapus class saat kembali ke atas
         }
     });
+</script>
+
+<!-- AOS -->
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init();
 </script>
 
 </body>
