@@ -43,34 +43,34 @@
         <div class="contact-box">
             <div class="contact form" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="" data-aos-duration="1000">
                 <h3>Kirim Pesan</h3>
-                <form>
+                <form onsubmit="sendEmail(); reset(); return false;">
                     <div class="form-box">
                         <div class="row-50">
                             <div class="input-box">
                                 <span>Nama Depan</span>
-                                <input type="text" placeholder="Gojo" required>
+                                <input type="text" id="firstName" placeholder="Gojo" required>
                             </div>
                             <div class="input-box">
                                 <span>Nama Belakang</span>
-                                <input type="text" placeholder="Satoru" required>
+                                <input type="text" id="secondName" placeholder="Satoru" required>
                             </div>
                         </div>
 
                         <div class="row-50">
                             <div class="input-box">
                                 <span>Email</span>
-                                <input type="email" placeholder="gojoganteng88@gmail.com" required>
+                                <input type="email" id="email" placeholder="gojoganteng88@gmail.com" required>
                             </div>
                             <div class="input-box">
                                 <span>Telepon</span>
-                                <input type="text" placeholder="+62 851-4646-6969" required>
+                                <input type="text" id="phone" placeholder="+62 851-4646-6969" required>
                             </div>
                         </div>
 
                         <div class="row-100">
                             <div class="input-box">
                                 <span>Pesan</span>
-                                <textarea placeholder="Daijoubu... ore wa saikyou dakara" required></textarea>
+                                <textarea id="message" placeholder="Daijoubu... ore wa saikyou dakara" required></textarea>
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@
                     </div>
                     <div>
                         <span><i class="fas fa-envelope"></i></span>
-                        <a href="mailto:azkazaki29@gmail.com">info@smkn4tangsel.sch.id</a>
+                        <a href="mailto:project360web@gmail.com">info@smkn4tangsel.sch.id</a>
                     </div>
                     <div>
                         <span><i class="fas fa-phone"></i></span>
@@ -173,6 +173,28 @@
 <script src="aos-master/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+
+<!-- SMTP.JS -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    function sendEmail() {
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "hostzaky@gmail.com",
+        Password : "32F035BD7DD7FF9B986DDB89940CDA3258E3",
+        To : 'project360web@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "Pesan Baru",
+        Body : "Nama: " + document.getElementById("firstName").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Nomor: " + document.getElementById("phone").value
+            + "<br> Pesan: " + document.getElementById("message").value
+        }).then(
+            message => alert("Pesan Telah Terkirim")
+        );
+    }
 </script>
 
 </body>
